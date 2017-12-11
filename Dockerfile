@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 MAINTAINER me@sirius.io
 
@@ -10,4 +10,4 @@ RUN apk add --update \
     coreutils \
     && rm -rf /var/cache/apk/*
 
-RUN pip3 install SANIC_NO_UVLOOP=true sanic==0.6.0 aiomysql jinja2
+RUN pip3 install sanic==0.7.0 aiomysql jinja2
